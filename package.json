@@ -7,6 +7,7 @@
     "start": "react-native start"
   },
   "dependencies": {
+    "@expo/metro-config": "^0.1.83",
     "expo": "^1.0.0",
     "expo-app-loading": "^1.0.3",
     "expo-font": "^9.2.1",
