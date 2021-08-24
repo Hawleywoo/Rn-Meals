@@ -15,6 +15,7 @@ const MealsNavigator = createStackNavigator({
     },
     MealDetail: MealDetailScreen
 }, {
+    mode: 'modal',
     defaultNavigationOptions: {
         headerStyle: {
             backgroundColor: Platform.OS === 'android' ? Colors.primaryColor: ''
