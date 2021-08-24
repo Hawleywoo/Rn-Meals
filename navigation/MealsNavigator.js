@@ -1,14 +1,15 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation-stack'
+import { createStackNavigator } from 'react-navigation-stack'
+import { createAppContainer } from 'react-navigation'
 import Categories from '../screens/Categories'
-import CategoryMeal from '../screens/CategoryMeals'
+import CategoryMeals from '../screens/CategoryMeals'
 import MealDetailScreen from '../screens/MealDetailScreen'
 
 const MealsNavigator = createStackNavigator({
     Categories: Categories,
     CategoryMeals: {
-        screen: CategoryMeal
+        screen: CategoryMeals
     },
     MealDetail: MealDetailScreen
 })
 
-export default MealsNavigator
+export default createAppContainer(MealsNavigator);

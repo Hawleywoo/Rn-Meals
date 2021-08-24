@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading'
 import { StyleSheet, Text, View } from 'react-native';
+import MealsNavigatior from './navigation/MealsNavigator'
+
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -22,12 +24,7 @@ export default function App() {
       />
     )
   }
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <MealsNavigatior />
 }
 
 const styles = StyleSheet.create({
@@ -38,3 +35,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
