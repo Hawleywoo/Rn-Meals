@@ -11,8 +11,6 @@ import CategoryMeals from './CategoryMeals';
 import CategoryGridTile from '../components/CategoryGridTile'
 import { CATEGORIES } from '../data/dummy-data'
 
-
-
 const Categories = props => {
 
     const renderGridItem = (itemData) => {

@@ -19,7 +19,17 @@ const CategoryMeals = props => {
 
     const renderMeal = (itemData) => {
         return (
-            <MealTile meal={itemData.item} />
+            <MealTile 
+                meal={itemData.item} 
+                onSelectMeal={()=> 
+                    props.navigation.navigate({
+                        routeName: 'MealDetail',
+                        params: {
+                            meal: itemData.item
+                        }
+                    })
+                } 
+            />
         )
     }
 
@@ -27,7 +37,12 @@ const CategoryMeals = props => {
     <View style={styles.screen}>
         <Text>The Category Meal Screen</Text>
         <Text>{selectedCategory.title}</Text>
-        <FlatList data={displayedMeals} keyExtractor={(item, index) => item.id} renderItem={renderMeal} />
+        <FlatList 
+            data={displayedMeals} 
+            keyExtractor={(item, index) => item.id} 
+            renderItem={renderMeal}
+            style={{width: '100%'}}
+        />
         <Button onPress={()=>{ props.navigation.navigate('MealDetail')}} title="Go To Details!"/>
     </View>)
 }
