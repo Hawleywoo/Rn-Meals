@@ -8,7 +8,6 @@ import {
     Platform,
     TouchableNativeFeedback
 } from 'react-native'
-import { ScreenContainer } from 'react-native-screens'
 
 const CategoryGridTile = props => {
     let TouchableCmp = TouchableOpacity

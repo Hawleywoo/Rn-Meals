@@ -9,17 +9,17 @@ import {
 } from 'react-native';
 import { CATEGORIES, MEALS } from '../data/dummy-data'
 import Colors from '../constants/Colors'
+import MealTile from '../components/MealTile'
 
 const CategoryMeals = props => {
 
     const categoryId = props.navigation.getParam('categoryId')
     const selectedCategory = CATEGORIES.find(category => category.id === categoryId)
-    const displayedMeals = MEALS.filter( meal => meal.categoryId.indexOf(categoryId) >= 0)
+    const displayedMeals = MEALS.filter( meal => meal.categoryIds.indexOf(categoryId) >= 0)
+
     const renderMeal = (itemData) => {
         return (
-            <View>
-                <Text>{itemData.item.title}</Text>
-            </View>
+            <MealTile meal={itemData.item} />
         )
     }
 
@@ -27,7 +27,7 @@ const CategoryMeals = props => {
     <View style={styles.screen}>
         <Text>The Category Meal Screen</Text>
         <Text>{selectedCategory.title}</Text>
-        <FlatList data={displayedMeals} keyExtractor={(item, index) => item.id} renderItem={} />
+        <FlatList data={displayedMeals} keyExtractor={(item, index) => item.id} renderItem={renderMeal} />
         <Button onPress={()=>{ props.navigation.navigate('MealDetail')}} title="Go To Details!"/>
     </View>)
 }
