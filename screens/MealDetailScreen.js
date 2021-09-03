@@ -19,4 +19,10 @@ const styles = StyleSheet.create({
     }
 })
 
+MealDetail.navigationOptions = (navigationData) => {
+    const meal = navigationData.navigation.getParam('meal')
+    return {
+        headerTitle: meal.title
+    }
+}
 export default MealDetail;
