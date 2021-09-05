@@ -7,6 +7,9 @@ const Favorites = props => {
         <Text>The Favorites Screen</Text>
     </View>)
 }
+Favorites.navigationOptions = {
+    headerTitle: 'Your Favorites'
+}
 
 const styles = StyleSheet.create({
     screen: {
