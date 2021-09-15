@@ -4,7 +4,6 @@ import {
     Text,
     View,
     StyleSheet,
-    FlatList,
     Platform,
     TouchableNativeFeedback
 } from 'react-native'
@@ -52,4 +51,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default CategoryGridTile
+export default CategoryGridTile;

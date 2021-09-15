@@ -1,11 +1,7 @@
 import React from 'react';
-import { 
-    View, 
-    Text, 
-    Button, 
+import {  
     FlatList, 
     StyleSheet, 
-    TouchableOpacity,
 } from 'react-native';
 import CategoryMeals from './CategoryMeals';
 import CategoryGridTile from '../components/CategoryGridTile'
@@ -31,7 +27,12 @@ const Categories = props => {
     }
 
     return (
-        <FlatList keyExtractor={(item, index) => item.id} data={CATEGORIES} renderItem={renderGridItem} numColumns={2} />
+        <FlatList 
+            keyExtractor={(item, index) => item.id} 
+            data={CATEGORIES} 
+            renderItem={renderGridItem} 
+            numColumns={2} 
+        />
     )
 }
 

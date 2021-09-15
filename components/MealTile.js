@@ -8,6 +8,7 @@ import {
 } from 'react-native'
 
 const MealTile = ({ meal, onSelectMeal }) => {
+    
     return (
         <View style={styles.mealItem}>
             <TouchableOpacity onPress={onSelectMeal}>
