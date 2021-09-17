@@ -6,6 +6,8 @@ import {
 import CategoryMeals from './CategoryMeals';
 import CategoryGridTile from '../components/CategoryGridTile'
 import { CATEGORIES } from '../data/dummy-data'
+import { HeaderButton, Item } from 'react-navigation-header-buttons';
+import  HeaderButtons  from '../components/HeaderButton';
 
 const Categories = props => {
 
@@ -36,8 +38,15 @@ const Categories = props => {
     )
 }
 
-Categories.navigationOptions = {
-    headerTitle: 'Meal Categories',
+Categories.navigationOptions = () => {
+    return { 
+        headerTitle: 'Meal Categories',
+        headerLeft: () => {
+            <HeaderButtons HeaderButtonComponent={HeaderButton} >
+                <Item title='Menu' iconName='ios-menu' onPress={()=>navigation.navigate({})} />
+            </HeaderButtons>
+        }
+    }
 }
 
 const styles = StyleSheet.create({

@@ -9,7 +9,8 @@ const Favorites = props => {
     return (
     <View style={styles.screen}>
         <MealList listData={favMeals} navigation={props.navigation} />
-    </View>)
+    </View>
+    )
 }
 Favorites.navigationOptions = {
     headerTitle: 'Your Favorites'
