@@ -42,9 +42,10 @@ Categories.navigationOptions = (navigationData) => {
     return { 
         headerTitle: 'Meal Categories',
         headerLeft: () => {
-            <HeaderButtons HeaderButtonComponent={HeaderButton} >
-                <Item title='Menu' iconName='ios-menu' onPress={()=> {}} />
-            </HeaderButtons>
+            return(
+                <HeaderButtons HeaderButtonComponent={HeaderButton} >
+                    <Item title='Menu' iconName='ios-menu' onPress={()=> navigationData.navigation.toggleDrawer()} />
+                </HeaderButtons>)
         }
     }
 }
