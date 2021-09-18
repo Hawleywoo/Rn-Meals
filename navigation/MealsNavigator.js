@@ -87,15 +87,13 @@ const MealsFavTabNavigator =
         Filters: FiltersScreen
     })
     
-    const mainNavigator = createDrawerNavigator({
+    const MainNavigator = createDrawerNavigator({
         MealsFavs: {
             screen: MealsFavTabNavigator
         },
         Filters: {
             screen: FiltersNavigator
         }
-    },{
-
     })
 
-export default createAppContainer(MealsFavTabNavigator);
+export default createAppContainer(MainNavigator);
